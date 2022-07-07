@@ -1,4 +1,5 @@
 import Head from "next/head";
+import HeroBanner from "../components/HeroBanner";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hi</h1>
+        <HeroBanner />
       </main>
     </div>
   );
