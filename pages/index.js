@@ -1,5 +1,6 @@
 import Head from "next/head";
 import HeroBanner from "../components/HeroBanner";
+import NavBar from "../components/NavBar";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
+        <NavBar />
         <HeroBanner />
       </main>
     </div>
