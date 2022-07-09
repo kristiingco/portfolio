@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { CheckIcon } from "@heroicons/react/solid";
 import { MailIcon } from "@heroicons/react/solid";
 import { UserIcon } from "@heroicons/react/solid";
@@ -6,7 +7,16 @@ import CustomButton from "./CustomButton";
 
 const HeroBanner = () => {
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="w-screen h-screen flex flex-col gap-5 justify-center items-center">
+      <div>
+        <Image
+          src="/static/me.png"
+          alt="Picture of me"
+          width={250}
+          height={250}
+          className="rounded-full"
+        />
+      </div>
       <div className="flex flex-col gap-3">
         <h1 className="font-semibold text-4xl">hi, i&apos;m kristi.</h1>
         <div>
