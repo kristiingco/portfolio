@@ -1,15 +1,14 @@
 import React from "react";
+import { MenuAlt3Icon } from "@heroicons/react/solid";
 
 const NavBar = () => {
   return (
-    <div className="flex">
+    <div className="flex justify-between p-3">
       <div>
-        <span>k.i.</span>
+        <span className="text-xl font-semibold">k.i.</span>
       </div>
       <div>
-        <ul>
-          <li>about</li>
-        </ul>
+        <MenuAlt3Icon className="h-7 w-7" />
       </div>
     </div>
   );
