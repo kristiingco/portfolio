@@ -1,19 +1,33 @@
 import React from "react";
+import Image from "next/image";
+import { MinusIcon } from "@heroicons/react/solid";
 
 const AboutSection = () => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <div>
-        <h2>about</h2>
-        <div>
+        <Image
+          src="/static/grad_me.png"
+          alt="Another picture of me"
+          width={300}
+          height={300}
+        />
+      </div>
+      <div className="px-10 py-2">
+        <h2 className="text-xl text-cool-green font-semibold">
+          <MinusIcon className="w-5 h-5 inline" />
+          about
+        </h2>
+        <div className="my-3 flex flex-col gap-4">
           <p>
-            Toffee bear claw toffee cupcake brownie sesame snaps. Jelly-o sesame
-            snaps muffin oat cake muffin sugar plum. Cotton candy fruitcake
-            halvah cake tootsie roll. Marshmallow jelly cookie macaroon muffin
-            tart. Cake cheesecake chocolate bar tiramisu shortbread biscuit bear
-            claw gummies. Toffee shortbread donut soufflé icing dragée
-            fruitcake. Dessert lollipop cake caramels apple pie apple pie. Bear
-            claw toffee powder cookie macaroon croissant.
+            I am Kristi Ingco, a front end developer who is passionate about
+            creating delightful experiences for users. I believe that the
+            intersection between technology and design can facilitate how people
+            solve problems.
+          </p>
+          <p>
+            Outside of work, I love to play video games and delve in digital
+            art!
           </p>
         </div>
       </div>
