@@ -11,6 +11,7 @@ const AboutSection = () => {
           alt="Another picture of me"
           width={300}
           height={300}
+          className="rounded-xl"
         />
       </div>
       <div className="px-10 py-2">
