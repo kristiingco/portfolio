@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutSection from "../components/AboutSection";
+import EducationSection from "../components/EducationSection";
 import ExperienceSection from "../components/ExperienceSection";
 import HeroBanner from "../components/HeroBanner";
 import NavBar from "../components/NavBar";
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroBanner />
         <AboutSection />
         <ExperienceSection />
+        <EducationSection />
       </main>
     </div>
   );
