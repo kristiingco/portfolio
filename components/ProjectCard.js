@@ -39,7 +39,7 @@ const ProjectCard = ({
           <SocialIcon
             url={githubUrl}
             target={"_blank"}
-            fgColor="#33B9BB"
+            fgColor="#169492"
             bgColor="none"
             style={{ width: "40px", height: "40px" }}
           />

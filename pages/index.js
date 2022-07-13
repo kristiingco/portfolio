@@ -2,6 +2,7 @@ import Head from "next/head";
 import AboutSection from "../components/AboutSection";
 import EducationSection from "../components/EducationSection";
 import ExperienceSection from "../components/ExperienceSection";
+import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 import NavBar from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
@@ -22,6 +23,7 @@ export default function Home() {
         <ExperienceSection />
         <EducationSection />
         <ProjectCards />
+        <Footer />
       </main>
     </div>
   );
