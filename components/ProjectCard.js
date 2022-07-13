@@ -22,7 +22,7 @@ const ProjectCard = ({
             return (
               <li
                 key={idx}
-                className="text-sm bg-cool-green text-white px-3 py-1 rounded-full"
+                className="text-sm bg-cool-green text-white px-3 py-1 rounded-full list-none"
               >
                 {item}
               </li>
