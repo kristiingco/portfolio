@@ -17,7 +17,7 @@ const ProjectCard = ({
       <h3 className="text-xl font-semibold">{title}</h3>
       <p>{description}</p>
       <div>
-        <ul className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3">
           {techStack.map((item, idx) => {
             return (
               <li
@@ -28,22 +28,21 @@ const ProjectCard = ({
               </li>
             );
           })}
-        </ul>
+        </div>
       </div>
       {externalUrl && githubUrl && (
         <div className="flex items-center justify-end">
           <a href={externalUrl} target="_blank" rel="noreferrer">
             <ExternalLinkIcon className="w-6 h-6 text-cool-green" />
           </a>
-          <a>
-            <SocialIcon
-              url={githubUrl}
-              target={"_blank"}
-              fgColor="#33B9BB"
-              bgColor="none"
-              style={{ width: "40px", height: "40px" }}
-            />
-          </a>
+
+          <SocialIcon
+            url={githubUrl}
+            target={"_blank"}
+            fgColor="#33B9BB"
+            bgColor="none"
+            style={{ width: "40px", height: "40px" }}
+          />
         </div>
       )}
     </div>
