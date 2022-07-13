@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { MinusIcon } from "@heroicons/react/solid";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const scrollVariant = {
+  visible: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, scale: 0 },
+};
 
 const AboutSection = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
   return (
-    <div className="flex flex-col items-center">
+    <motion.section
+      ref={ref}
+      variants={scrollVariant}
+      initial="hidden"
+      animate={control}
+      className="flex flex-col items-center"
+    >
       <div>
         <Image
           src="/static/grad_me.png"
@@ -32,7 +54,7 @@ const AboutSection = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

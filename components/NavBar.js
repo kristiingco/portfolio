@@ -7,8 +7,12 @@ const NavBar = () => {
       <div>
         <span className="text-xl font-semibold">k.i.</span>
       </div>
-      <div>
+      <div className="flex">
         <MenuAlt3Icon className="h-7 w-7" />
+        <div>
+          <span>about</span>
+          <span>about</span>
+        </div>
       </div>
     </div>
   );

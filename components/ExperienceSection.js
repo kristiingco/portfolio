@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionCards from "./SectionCards";
 import { MinusIcon } from "@heroicons/react/solid";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const scrollVariant = {
+  visible: { x: 0 },
+  hidden: { x: -100 },
+};
 
 const experienceData = [
   {
@@ -18,15 +25,30 @@ const experienceData = [
       "I participated in the SDLC and partook in Scrum meetings to learn as I gained experience in working on the company's products and services. I was part of the team in charge of reengineering the static website into a dynamic web application using Angular, and I was also able to work on the company's internal component library.",
   },
 ];
+
 const ExperienceSection = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
   return (
-    <section>
+    <motion.section
+      ref={ref}
+      variants={scrollVariant}
+      initial="hidden"
+      animate={control}
+    >
       <h2 className="text-xl text-cool-green font-semibold ml-10">
         <MinusIcon className="w-5 h-5 inline" />
         experience
       </h2>
       <SectionCards data={experienceData} />
-    </section>
+    </motion.section>
   );
 };
 

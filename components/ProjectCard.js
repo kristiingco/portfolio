@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { SocialIcon } from "react-social-icons";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const scrollVariant = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 100 },
+};
 
 const ProjectCard = ({
   imageUrl,
@@ -11,8 +18,26 @@ const ProjectCard = ({
   externalUrl,
   githubUrl,
 }) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
   return (
-    <div className="flex flex-col shadow-lg shadow-slate-400 p-5 gap-3 w-80 rounded-xl">
+    <motion.div
+      ref={ref}
+      variants={scrollVariant}
+      initial="hidden"
+      animate={control}
+      whileHover={{
+        scale: 1.1,
+      }}
+      className="flex flex-col shadow-lg shadow-slate-400 p-5 gap-3 w-80 rounded-xl"
+    >
       <Image src={imageUrl} alt={title} width="275" height="150" />
       <h3 className="text-xl font-semibold">{title}</h3>
       <p>{description}</p>
@@ -45,7 +70,7 @@ const ProjectCard = ({
           />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

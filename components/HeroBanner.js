@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { CheckIcon } from "@heroicons/react/solid";
 import { MailIcon } from "@heroicons/react/solid";
 import { UserIcon } from "@heroicons/react/solid";
 import CustomButton from "./CustomButton";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const scrollVariant = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
 
 const HeroBanner = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
   return (
-    <div className="w-screen h-screen flex flex-col gap-5 justify-center items-center">
+    <motion.section
+      className="w-screen h-screen flex flex-col gap-5 justify-center items-center"
+      ref={ref}
+      variants={scrollVariant}
+      initial="hidden"
+      animate={control}
+    >
       <div>
         <Image
           src="/static/me.png"
@@ -48,7 +70,7 @@ const HeroBanner = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
