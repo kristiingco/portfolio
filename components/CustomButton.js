@@ -9,7 +9,7 @@ const CustomButton = ({ buttonText, styleType, Icon }) => {
           : "border-2 border-cool-green"
       } w-full p-2 rounded-md my-1`}
     >
-      {buttonText} <Icon className="w-5 h-5" />
+      {buttonText} {Icon && <Icon className="w-5 h-5" />}
     </button>
   );
 };

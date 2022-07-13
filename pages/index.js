@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutSection from "../components/AboutSection";
+import { ContactSection } from "../components/ContactSection";
 import EducationSection from "../components/EducationSection";
 import ExperienceSection from "../components/ExperienceSection";
 import Footer from "../components/Footer";
@@ -23,6 +24,7 @@ export default function Home() {
         <ExperienceSection />
         <EducationSection />
         <ProjectCards />
+        <ContactSection />
         <Footer />
       </main>
     </div>
