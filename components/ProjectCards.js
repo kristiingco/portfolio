@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { MinusIcon } from "@heroicons/react/solid";
+import { v4 as uuidv4 } from "uuid";
 
 const projectData = [
   {
@@ -52,13 +53,17 @@ const ProjectCards = () => {
       </h2>
       <div className="flex flex-col gap-10 items-center">
         {projectData.map(
-          (
-            { imageUrl, title, description, techStack, externalUrl, githubUrl },
-            idx
-          ) => {
+          ({
+            imageUrl,
+            title,
+            description,
+            techStack,
+            externalUrl,
+            githubUrl,
+          }) => {
             return (
               <ProjectCard
-                key={idx}
+                key={uuidv4()}
                 imageUrl={imageUrl}
                 title={title}
                 description={description}

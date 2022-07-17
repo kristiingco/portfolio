@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { ExternalLinkIcon } from "@heroicons/react/solid";
 import { SocialIcon } from "react-social-icons";
+import { v4 as uuidv4 } from "uuid";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -43,10 +44,10 @@ const ProjectCard = ({
       <p>{description}</p>
       <div>
         <div className="flex flex-wrap gap-3">
-          {techStack.map((item, idx) => {
+          {techStack.map((item) => {
             return (
               <li
-                key={idx}
+                key={uuidv4()}
                 className="text-sm bg-cool-green text-white px-3 py-1 rounded-full list-none"
               >
                 {item}
