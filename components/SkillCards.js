@@ -2,45 +2,8 @@ import React from "react";
 import SkillCard from "./SkillCard";
 import { MinusIcon } from "@heroicons/react/solid";
 import { v4 as uuidv4 } from "uuid";
+import { skillData } from "../lib/skillData";
 
-const skillData = [
-  {
-    name: "Javascript",
-    devIconClass: "devicon-javascript-plain colored",
-  },
-  {
-    name: "React",
-    devIconClass: "devicon-react-original colored",
-  },
-  {
-    name: "Next.js",
-    devIconClass: "devicon-nextjs-original colored",
-  },
-  {
-    name: "HTML5",
-    devIconClass: "devicon-html5-plain colored",
-  },
-  {
-    name: "CSS3",
-    devIconClass: "devicon-css3-plain colored",
-  },
-  {
-    name: "Sass",
-    devIconClass: "devicon-sass-original colored",
-  },
-  {
-    name: "Tailwind CSS",
-    devIconClass: "devicon-tailwindcss-plain colored",
-  },
-  {
-    name: "Github",
-    devIconClass: "devicon-github-original colored",
-  },
-  {
-    name: "Firebase",
-    devIconClass: "devicon-firebase-plain colored",
-  },
-];
 const SkillCards = () => {
   return (
     <div className="grid" id="skills">
