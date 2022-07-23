@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { MenuAlt3Icon, XIcon } from "@heroicons/react/solid";
+import { motion } from "framer-motion";
+
+const slideVariant = {
+  visible: { x: 0 },
+  hidden: { x: 100 },
+};
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,10 +38,12 @@ const NavBar = () => {
             }
           }}
         />
-        <div
+        <motion.div
           className={`bg-cool-green flex flex-col items-center justify-center text-white text-3xl font-semibold absolute h-screen top-0 right-0 w-56 z-50 p-3 ${
             !isMenuOpen ? "hidden overflow-hidden" : ""
           }`}
+          variants={slideVariant}
+          animate={isMenuOpen ? "visible" : "hidden"}
         >
           <div className="flex flex-col gap-3">
             <a href="#about" onClick={handleOnMenuClick}>
@@ -64,7 +72,7 @@ const NavBar = () => {
           >
             <XIcon className="w-8" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </header>
   );
