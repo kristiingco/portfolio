@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { MinusIcon } from "@heroicons/react/solid";
+import { MinusIcon, DocumentDownloadIcon } from "@heroicons/react/solid";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import CustomButton from "./CustomButton";
 
 const scrollVariant = {
   visible: { opacity: 1, scale: 1 },
@@ -53,6 +54,19 @@ const AboutSection = () => {
             Outside of work, I love to play video games and delve in digital
             art!
           </p>
+          <div className="w-44 self-center">
+            <a
+              href="https://drive.google.com/file/d/1bVHs2ZHqvopQi6Ru57DMa0FUmoPJhBPc/view?usp=sharing"
+              target={"_blank"}
+              rel="noreferrer"
+            >
+              <CustomButton
+                buttonText={"download resume"}
+                styleType="primary"
+                Icon={DocumentDownloadIcon}
+              />
+            </a>
+          </div>
         </div>
       </div>
     </motion.section>

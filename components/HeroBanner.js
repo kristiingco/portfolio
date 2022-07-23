@@ -60,16 +60,20 @@ const HeroBanner = () => {
           </ul>
         </div>
         <div>
-          <CustomButton
-            buttonText={"contact me"}
-            styleType="primary"
-            Icon={MailIcon}
-          />
-          <CustomButton
-            buttonText={"about me"}
-            styleType="secondary"
-            Icon={UserIcon}
-          />
+          <a href="#contact">
+            <CustomButton
+              buttonText={"contact me"}
+              styleType="primary"
+              Icon={MailIcon}
+            />
+          </a>
+          <a href="#about">
+            <CustomButton
+              buttonText={"about me"}
+              styleType="secondary"
+              Icon={UserIcon}
+            />
+          </a>
         </div>
       </div>
     </motion.section>
