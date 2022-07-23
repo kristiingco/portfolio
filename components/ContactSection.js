@@ -12,7 +12,7 @@ export const ContactSection = () => {
     );
   }
   return (
-    <section className="mt-10">
+    <section className="mt-10" id="contact">
       <div className="flex flex-col items-center p-5">
         <h2 className="font-semibold text-lg">
           let&apos;s do something amazing together.

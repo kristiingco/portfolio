@@ -43,7 +43,7 @@ const skillData = [
 ];
 const SkillCards = () => {
   return (
-    <div className="grid">
+    <div className="grid" id="skills">
       <h2 className="text-xl text-cool-green font-semibold ml-10 mb-5">
         <MinusIcon className="w-5 h-5 inline" />
         skills

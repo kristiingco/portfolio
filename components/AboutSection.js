@@ -26,6 +26,7 @@ const AboutSection = () => {
       initial="hidden"
       animate={control}
       className="flex flex-col items-center"
+      id="about"
     >
       <div>
         <Image
