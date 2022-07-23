@@ -24,7 +24,7 @@ const HeroBanner = () => {
 
   return (
     <motion.section
-      className="w-screen h-screen flex flex-col gap-5 justify-center items-center"
+      className="w-screen h-screen gap-5 grid place-content-center"
       ref={ref}
       variants={scrollVariant}
       initial="hidden"
@@ -40,7 +40,9 @@ const HeroBanner = () => {
         />
       </div>
       <div className="flex flex-col gap-3">
-        <h1 className="font-semibold text-4xl">hi, i&apos;m kristi.</h1>
+        <h1 className="font-semibold text-4xl text-center">
+          hi, i&apos;m kristi.
+        </h1>
         <div>
           <ul>
             <li>

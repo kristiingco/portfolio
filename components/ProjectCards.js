@@ -46,7 +46,7 @@ const projectData = [
 ];
 const ProjectCards = () => {
   return (
-    <div>
+    <div className="mt-5">
       <h2 className="text-xl text-cool-green font-semibold ml-10 mb-5">
         <MinusIcon className="w-5 h-5 inline" />
         projects

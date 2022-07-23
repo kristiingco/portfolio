@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 import NavBar from "../components/NavBar";
 import ProjectCards from "../components/ProjectCards";
+import SkillCards from "../components/SkillCards";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <NavBar />
         <HeroBanner />
         <AboutSection />
+        <SkillCards />
         <ProjectCards />
         <ContactSection />
         <Footer />
