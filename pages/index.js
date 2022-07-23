@@ -1,8 +1,6 @@
 import Head from "next/head";
 import AboutSection from "../components/AboutSection";
 import { ContactSection } from "../components/ContactSection";
-import EducationSection from "../components/EducationSection";
-import ExperienceSection from "../components/ExperienceSection";
 import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 import NavBar from "../components/NavBar";
@@ -21,8 +19,6 @@ export default function Home() {
         <NavBar />
         <HeroBanner />
         <AboutSection />
-        <ExperienceSection />
-        <EducationSection />
         <ProjectCards />
         <ContactSection />
         <Footer />
