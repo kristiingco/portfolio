@@ -39,7 +39,13 @@ const ProjectCard = ({
       }}
       className="flex flex-col shadow-lg shadow-slate-400 p-5 gap-3 w-80 rounded-xl"
     >
-      <Image src={imageUrl} alt={title} width="275" height="150" />
+      <Image
+        src={imageUrl}
+        alt={title}
+        width="275"
+        height="150"
+        className="object-cover"
+      />
       <h3 className="text-xl font-semibold">{title}</h3>
       <p>{description}</p>
       <div>
